@@ -1,0 +1,17 @@
+{"properties": [
+  {
+    "name": "spring.datasource.jpa.hibernate.ddl-auto",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.datasource.jpa.hibernate.ddl-auto'"
+  },
+  {
+    "name": "spring.datasource.properties.hibernate.dialect",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.datasource.properties.hibernate.dialect'"
+  },
+  {
+    "name": "spring.datasource.show-sql",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.datasource.show-sql'"
+  }
+]}
