@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.model.Person;
+import com.example.demo.data.vo.v1.PersonVO;
 import com.example.demo.service.PersonServices;
 
 @RestController
@@ -25,12 +25,12 @@ public class PersonController {
 	private PersonServices services;
 	
 	@GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
-	public List<Person> findAll(){
+	public List<PersonVO> findAll(){
 		return services.findAll();
 	}
 
 	@GetMapping(value = "{id}", produces = MediaType.APPLICATION_JSON_VALUE)
-	public Person findById(@PathVariable(value = "id") Long id){
+	public PersonVO findById(@PathVariable(value = "id") Long id){
 		return services.findById(id);
 	}
 	
@@ -41,12 +41,12 @@ public class PersonController {
 	}
 	
 	@PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-	public Person created(@RequestBody Person person){
+	public PersonVO created(@RequestBody PersonVO person){
 		return services.created(person);
 	}
 	
 	@PutMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-	public Person update(@RequestBody Person person){
+	public PersonVO update(@RequestBody PersonVO person){
 		return services.update(person);
 	}
 
